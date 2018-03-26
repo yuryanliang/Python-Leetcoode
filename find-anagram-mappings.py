@@ -19,7 +19,17 @@ A[i], B[i] are integers in range [0, 10^5].
 
 Ways
 就是找到A中每个元素在B中的位置即可，如果出现了重复的元素，可以返回任意一种次序即可。
-
+class Solution(object):
+    def anagramMappings(self, A, B):
+        """
+        :type A: List[int]
+        :type B: List[int]
+        :rtype: List[int]
+        """
+        lookup= {}
+        for i in range(len(B)):
+            lookup[B[i]] = i
+        return [lookup[each] for each in A]
 方法一：
 
 class Solution:
