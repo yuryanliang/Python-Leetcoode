@@ -9,6 +9,36 @@
 # Output: 7 -> 0 -> 8
 #
 # Definition for singly-linked list.
+class Solution(object):
+    def addTwoNumbers(self, l1, l2):
+        """
+        :type l1: ListNode
+        :type l2: ListNode
+        :rtype: ListNode
+        """
+        
+
+        idx = ListNode(0);       # 链表问题
+        add = idx;
+        ran = 0;
+    
+        while l1 or l2 or ran:
+            v1 = 0;
+            v2 = 0;
+            if l1:
+                v1 = l1.val;
+                l1 = l1.next     # l1 从 l1 的 next 开始
+            if l2:
+                v2 = l2.val;
+                l2 = l2.next
+            
+            add.next = ListNode((v1+v2+ran)%10);
+            add = add.next;
+            ran = (v1+v2+ran)/10;
+           
+            
+        return idx.next
+
 class ListNode:
     def __init__(self, x):
         self.val = x
