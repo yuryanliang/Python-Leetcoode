@@ -5,6 +5,24 @@
 # 
 # The order of elements can be changed. It doesn't matter what you leave beyond the new length.
 #
+
+class Solution(object):
+    def removeElement(self, nums, val):
+        """
+        :type nums: List[int]
+        :type val: int
+        :rtype: int
+        """
+        last = 0
+        i = 0
+        
+        while i < len(nums):
+            if nums[i] != val:
+                nums[last] = nums[i]
+                last +=1
+            i+=1
+            
+        return last 
 class Solution(object):
     def removeElement(self, nums, val):
         """
