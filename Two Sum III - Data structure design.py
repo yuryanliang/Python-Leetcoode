@@ -10,7 +10,39 @@
 # add(1); add(3); add(5);
 # find(4) -> true
 # find(7) -> false
+class TwoSum:
 
+    def __init__(self):
+        self.nums = {}
+        """
+        Initialize your data structure here.
+        """
+        
+    def add(self, number):
+        if number in self.nums:
+            self.nums[number] += 1
+        else:
+            self.nums[number] = 1
+        """
+        Add the number to an internal data structure..
+        :type number: int
+        :rtype: void
+        """
+        
+    def find(self, value):
+        nums = self.nums
+        for n in nums:
+            if value - n in nums and (value - n != n or nums[n] >= 2):
+                return True
+                
+        return False
+    
+        """
+        Find if there exists any pair of numbers which sum is equal to the value.
+        :type value: int
+        :rtype: bool
+        """
+        
 from collections import defaultdict
 
 class TwoSum(object):
