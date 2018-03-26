@@ -18,7 +18,26 @@ What if the inputs contain unicode characters? How would you adapt your solution
 给定两个字符串 s 和 t，写一个函数判断 t 是否是 s 的一个 “anagram”（颠倒字母顺序构成的词）。 
 比如： s = “anagram”， t = “nagaram”，返回 true； s = “rat”， t = “car”，返回false。 
 备注：假定给定的字符串都只包含小写字母。
-
+class Solution(object):
+    def isAnagram(self, s, t):
+        """
+        :type s: str
+        :type t: str
+        :rtype: bool
+        """
+        dictS = {}
+        dictT = {}
+        for n in s:
+            if n not in dictS:
+                dictS[n] = 1
+            else:
+                dictS[n]+=1
+        for n in t:
+            if n not in dictT:
+                dictT[n] = 1
+            else:
+                dictT[n]+=1
+        return dictS == dictT
 进一步：如果输入包含 unicode 字符怎么办？你要怎么调整你的代码来解决这样的问题？
 
 思路方法
