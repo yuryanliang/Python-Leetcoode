@@ -41,6 +41,24 @@ B:     b1 → b2 → b3
 假设两个链表有交叉，那么交叉后的长度是一样的，而交叉前的长度可能不一致。如果我们将两个链表的交叉前的长度截成一致，那么就可以同时遍历两个链表，判断是否有相交节点。截断交叉前的不同长度等价于截断两个完整链表的不同长度。此方法需要计算两个链表长度。
 
 代码
+class Solution(object):
+    def getIntersectionNode(self, headA, headB):
+        """
+        :type head1, head1: ListNode
+        :rtype: ListNode
+        """
+        curr_list = set()
+        while(headA):
+            curr_list.add(headA)
+            headA = headA.next
+        
+        
+        while(headB):
+            if headB in curr_list:
+                return headB
+            headB = headB.next
+            
+        return None
 
 # Definition for singly-linked list.
 # class ListNode(object):
