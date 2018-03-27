@@ -16,6 +16,16 @@ The digits are stored such that the most significant digit is at the head of the
 思路一
 从后向前扫描数组，每位加一，有进位则变成0且保留进位。最高位如果是9且有进位则要在数组前面多加一个元素1。
 
+class Solution(object):
+    def plusOne(self, d):
+        for i in range(len(d)-1, -1, -1):
+            if d[i] < 9:
+                d[i] += 1
+                return d
+            d[i] = 0
+        return [1] + d
+    
+    
 代码
 
 class Solution(object):
