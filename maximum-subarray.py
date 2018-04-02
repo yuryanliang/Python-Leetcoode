@@ -29,3 +29,26 @@ class Solution(object):
 
 if __name__ == "__main__":
     print Solution().maxSubArray([-2,1,-3,4,-1,2,1,-5,4])
+
+    
+    
+    class Solution(object):
+    def maxSubArray(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        
+        
+        
+        sums = nums[0]
+        m= sums
+        
+        for i in range (1,len(nums)):
+            if sums < 0:
+                sums = 0
+            sums += nums[i]
+            
+            m = max(sums, m)
+                
+        return m
