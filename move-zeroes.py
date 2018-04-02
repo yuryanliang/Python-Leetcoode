@@ -11,6 +11,18 @@
 # Note:
 # You must do this in-place without making a copy of the array.
 # Minimize the total number of operations.
+class Solution(object):
+    def moveZeroes(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: void Do not return anything, modify nums in-place instead.
+        """
+        y = 0
+        
+        for x in range(len(nums)):
+            if nums[x] !=0:
+                nums[x] , nums[y] = nums[y] , nums[x]
+                y+=1
 '''解题思路：
 题目可以在O(n)时间复杂度内求解
 
