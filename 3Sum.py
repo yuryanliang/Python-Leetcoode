@@ -65,4 +65,4 @@ class Solution(object):
 
 if __name__ == '__main__':
     result = Solution().threeSum([-1, 0, 1, 2, -1, -4])
-    print result
+    print (result)

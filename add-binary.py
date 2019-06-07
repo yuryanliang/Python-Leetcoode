@@ -44,3 +44,6 @@ class Solution(object):
         if flag == 1:
             s = '1' + s
         return s
+if __name__ == '__main__':
+    result = Solution().addBinary("11","1")
+    print (result)
