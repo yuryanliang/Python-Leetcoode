@@ -13,5 +13,4 @@
 class Solution:
     def hammingWeight(self,n):
         res =0
-        for i in range(32):
-            if
+
