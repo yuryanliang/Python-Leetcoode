@@ -5,10 +5,10 @@
 # The new list should be made by splicing together the nodes of the first two lists.
 #
 # Definition for singly-linked list.
-# class ListNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
+class ListNode(object):
+    def __init__(self, x):
+        self.val = x
+        self.next = None
 
 class Solution(object):
     def mergeTwoLists(self, l1, l2):
@@ -39,3 +39,22 @@ class Solution(object):
         else:
             tmp.next = l2
         return dummy.next
+
+def merge2(test_list1, test_list2):
+
+    size_1 = len(test_list1)
+    size_2 = len(test_list2)
+
+    res = []
+    i, j = 0, 0
+
+    while i < size_1 and j < size_2:
+        if test_list1[i] < test_list2[j]:
+            res.append(test_list1[i])
+            i += 1
+
+        else:
+            res.append(test_list2[j])
+            j += 1
+
+    return res + test_list1[i:] + test_list2[j:]
