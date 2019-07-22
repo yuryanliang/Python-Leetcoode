@@ -1,22 +1,22 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Marketplace
-Explore
- @yuryanliang
-Sign out
-0
-0 1,618 yuryanliang/LeetCode
-forked from kamyu104/LeetCode
- Code  Pull requests 0  Projects 0  Wiki  Insights  Settings
-LeetCode/Python/merge-two-binary-trees.py
-c5e598a  on Jul 18, 2017
-@swaroopgrs swaroopgrs Update merge-two-binary-trees.py
-@kamyu104 @swaroopgrs
-     
-54 lines (50 sloc)  1.53 KB
+# Skip to content
+# This repository
+# Search
+# Pull requests
+# Issues
+# Marketplace
+# Explore
+#  @yuryanliang
+# Sign out
+# 0
+# 0 1,618 yuryanliang/LeetCode
+# forked from kamyu104/LeetCode
+#  Code  Pull requests 0  Projects 0  Wiki  Insights  Settings
+# LeetCode/Python/merge-two-binary-trees.py
+# c5e598a  on Jul 18, 2017
+# @swaroopgrs swaroopgrs Update merge-two-binary-trees.py
+# @kamyu104 @swaroopgrs
+#
+# 54 lines (50 sloc)  1.53 KB
 # Time:  O(n)
 # Space: O(h)
 
