@@ -25,7 +25,7 @@ class Solution:
 if __name__ == "__main__":
     print Solution().lengthOfLongestSubstring("abcabcbb")
     
-    class Solution(object):
+class Solution(object):
     def lengthOfLongestSubstring(self, s):
         """
         :type s: str
